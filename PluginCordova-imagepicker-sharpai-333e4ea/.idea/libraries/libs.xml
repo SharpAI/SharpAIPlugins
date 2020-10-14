@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/android/Library/Android-Ultra-Photo-Selector/libs/android-support-v4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/android/Library/Android-Ultra-Photo-Selector/libs/universal-image-loader-1.9.3-with-sources.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

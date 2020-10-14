@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="org.sharpai.everywhere.appsetup"
+        version="1.1.0">
+
+  <name>SharpAIAppSetup</name>
+
+  <description>
+    To Setup Application instead of change during build
+  </description>
+
+  <license>MIT</license>
+
+  <engines>
+    <engine name="cordova" version=">=3.0.0"/>
+  </engines>
+  <js-module src="www/AppSetup.js" name="AppSetup">
+    <clobbers target="window.plugins.appsetup"/>
+  </js-module>
+  <!-- ios -->
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="AppSetup">
+        <param name="ios-package" value="AppSetup"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+    <header-file src="src/ios/AppSetup.h"/>
+    <source-file src="src/ios/AppSetup.m"/>
+    <header-file src="src/ios/MainViewController+keyboard.h" />
+    <source-file src="src/ios/MainViewController+keyboard.m" />
+    <header-file src="src/ios/CDVWKWebViewEngine+LocalStorage.h" />
+    <source-file src="src/ios/CDVWKWebViewEngine+LocalStorage.m" />
+    <header-file src="src/ios/CDVViewController+CreateGapView.h" />
+    <source-file src="src/ios/CDVViewController+CreateGapView.m" />
+
+    <!-- <framework src="SafariServices.framework"/> -->
+
+    <config-file target="*-Info.plist" parent="UIBackgroundModes">
+      <array>
+        <string>audio</string>
+        <string>remote-notification</string>
+      </array>
+    </config-file>
+
+    <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+      <string>来了吗 需要您的同意,才能使用相机，扫描二维码，加入新公司</string>
+    </config-file>
+
+    <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
+      <string>来了吗 需要您的同意,才能访问相册，导入相册中的二维码，加入新公司</string>
+    </config-file>
+
+
+    <config-file target="*-Info.plist" parent="CFBundleDisplayName">
+      <string>来了吗</string>
+    </config-file>
+
+    <config-file target="*-Info.plist" parent="NSAppTransportSecurity">
+      <dict>
+        <key>NSAllowsArbitraryLoads</key><true/>
+      </dict>
+    </config-file>
+    <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
+      <array>
+        <string>weixin</string>
+        <string>wechat</string>
+        <string>mqq</string>
+      </array>
+    </config-file>
+    <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+      <array>
+        <dict>
+          <key>CFBundleURLName</key>
+          <string>com.actiontec.sharpai</string>
+          <key>CFBundleURLSchemes</key>
+          <array>
+            <string>sharpai</string>
+          </array>
+        </dict>
+      </array>
+    </config-file>
+  </platform>
+
+</plugin>

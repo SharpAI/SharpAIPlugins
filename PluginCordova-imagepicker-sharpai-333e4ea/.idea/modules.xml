@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/src/android/Library/Android-Ultra-Photo-Selector/Android-Ultra-Photo-Selector.iml" filepath="$PROJECT_DIR$/src/android/Library/Android-Ultra-Photo-Selector/Android-Ultra-Photo-Selector.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/android/Library/Library.iml" filepath="$PROJECT_DIR$/src/android/Library/Library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/android/Library/Android-Ultra-Photo-Selector/build/generated/source/buildConfig/buildConfig.iml" filepath="$PROJECT_DIR$/src/android/Library/Android-Ultra-Photo-Selector/build/generated/source/buildConfig/buildConfig.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/android/Library/Android-Ultra-Photo-Selector/build/generated/source/r/r.iml" filepath="$PROJECT_DIR$/src/android/Library/Android-Ultra-Photo-Selector/build/generated/source/r/r.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/android/com/synconset/synconset.iml" filepath="$PROJECT_DIR$/src/android/com/synconset/synconset.iml" />
+    </modules>
+  </component>
+</project>
