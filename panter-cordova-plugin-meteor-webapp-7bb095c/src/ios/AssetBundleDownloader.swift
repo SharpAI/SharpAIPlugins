@@ -208,7 +208,7 @@ final class AssetBundleDownloader: NSObject, URLSessionDelegate, URLSessionTaskD
 
   // MARK: Application State Notifications
 
-  func applicationWillEnterForeground() {
+    @objc func applicationWillEnterForeground() {
     if status == .suspended {
       resume()
     }

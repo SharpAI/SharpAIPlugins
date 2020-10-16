@@ -10,7 +10,7 @@ func loadRuntimeConfigFromIndexFileAtURL(_ fileURL: URL) throws -> AssetBundle.R
     let indexFileString = try NSString(contentsOf: fileURL, encoding: String.Encoding.utf8.rawValue)
     guard
       let match  = configJSONRegEx.firstMatchInString(indexFileString as String),
-      let configString = (indexFileString.substring(with: match.rangeAt(1)) as NSString).removingPercentEncoding,
+        let configString = (indexFileString.substring(with: match.range(at: 1)) as NSString).removingPercentEncoding,
       let configData = configString.data(using: String.Encoding.utf8)
       else { throw WebAppError.unsuitableAssetBundle(reason: "Couldn't load runtime config from index file", underlyingError: nil) }
     return AssetBundle.RuntimeConfig(json: try JSONSerialization.jsonObject(with: configData, options: []) as! JSONObject)

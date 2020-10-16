@@ -202,10 +202,10 @@ open class WebAppLocalServer: METPlugin, AssetBundleManagerDelegate {
 
   // MARK: - Notifications
 
-  func pageDidLoad() {
+    @objc func pageDidLoad() {
   }
 
-  func applicationDidEnterBackground() {
+    @objc func applicationDidEnterBackground() {
     // Stop startup timer when going into the background, to avoid
     // blacklisting a version just because the web view has been suspended
     startupTimer?.stop()
