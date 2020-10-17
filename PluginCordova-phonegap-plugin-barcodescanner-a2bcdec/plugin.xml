@@ -53,7 +53,6 @@
     </config-file>
     <framework src="src/android/barcodescanner.gradle" custom="true" type="gradleReference"/>
     <resource-file src="src/android/barcodescanner-release-2.1.2.aar" target="libs/barcodescanner.aar"/>
-    <dependency id="cordova-plugin-compat" version="^1.0.0"/>
   </platform>
   <platform name="windows">
     <js-module src="src/windows/BarcodeScannerProxy.js" name="BarcodeScannerProxy">
@@ -109,6 +108,6 @@
     <config-file target="www/config.xml" parent="/widget/rim:permissions">
       <rim:permit>use_camera</rim:permit>
     </config-file>
-    <dependency id="cordova-plugin-bb-app"/>
+    <!--<dependency id="cordova-plugin-bb-app"/>-->
   </platform>
 </plugin>
