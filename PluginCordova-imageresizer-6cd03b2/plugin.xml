@@ -5,17 +5,15 @@
   version="0.1.2">
 
 	<name>ImageResizer</name>
-	 
+
 	<description>
 		The plugin will resize images natively using phonegap/cordova's plugin architecture
 	</description>
 
 	<engines>
 		<engine name="cordova" version=">=3.0.0" />
-	</engines>  
+	</engines>
 	
-	<dependency id="cordova-plugin-file" version="3.0.0" />
-
 	<js-module src="www/imageresize.js" name="ImageResizePlugin">
 		<clobbers target="plugins.imageResizer" />
 	</js-module>
@@ -30,7 +28,7 @@
 
 		<header-file src="src/ios/ImageResize.h" />
 		<source-file src="src/ios/ImageResize.m" />
-		
+
 		<header-file src="src/ios/NSData+Base64.h" />
 		<source-file src="src/ios/NSData+Base64.m" compiler-flags="-fno-objc-arc" />
 

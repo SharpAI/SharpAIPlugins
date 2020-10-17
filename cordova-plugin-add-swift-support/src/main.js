@@ -147,7 +147,7 @@ export default (context) => {
                 console.log('Use Swift language version', swiftVersion);
               } else {
                 xcodeProject.updateBuildProperty('SWIFT_VERSION', '4.0', buildConfig.name);
-                console.log('Update SWIFT version to 3.0', buildConfig.name);
+                console.log('Update SWIFT version to 4.0', buildConfig.name);
               }
             }
 
