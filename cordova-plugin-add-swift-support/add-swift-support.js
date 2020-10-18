@@ -12736,8 +12736,9 @@ exports.default = function (context) {
 
   // This script has to be executed depending on the command line arguments, not
   // on the hook execution cycle.
-  if (context.hook === 'after_platform_add' && context.cmdLine.includes('platform add') || context.hook === 'after_prepare' && context.cmdLine.includes('prepare') || context.hook === 'after_plugin_add' && context.cmdLine.includes('plugin add')) {
-    platformMetadata.getPlatformVersions(projectRoot).then(function (platformVersions) {
+  if (context.hook === 'after_platform_add' && context.cmdLine.includes('platform add') || context.hook === 'after_prepare' /*&& context.cmdLine.includes('prepare')*/ || context.hook === 'after_plugin_add' && context.cmdLine.includes('plugin add')) {
+	    console.log('excuting add-swift-support-plugin scripts.')
+		platformMetadata.getPlatformVersions(projectRoot).then(function (platformVersions) {
       var IOS_MIN_DEPLOYMENT_TARGET = '7.0';
       var platformPath = _path2.default.join(projectRoot, 'platforms', 'ios');
       var config = getConfigParser(context, _path2.default.join(projectRoot, 'config.xml'));
@@ -12856,6 +12857,8 @@ exports.default = function (context) {
               }
             }
 
+						xcodeProject.updateBuildProperty('SWIFT_VERSION', '4.0', buildConfig.name);
+						console.log('Update SWIFT version to 4.0', buildConfig.name);
             if (buildConfig.name === 'Debug') {
               if (xcodeProject.getBuildProperty('SWIFT_OPTIMIZATION_LEVEL', buildConfig.name) !== '"-Onone"') {
                 xcodeProject.updateBuildProperty('SWIFT_OPTIMIZATION_LEVEL', '"-Onone"', buildConfig.name);

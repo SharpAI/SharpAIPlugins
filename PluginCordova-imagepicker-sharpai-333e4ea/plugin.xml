@@ -82,7 +82,8 @@
         <header-file src="src/ios/DNImagePicker/Views/MWTapDetectingImageView.h" />
         <source-file src="src/ios/DNImagePicker/Views/MWTapDetectingImageView.m" />
 
-        <resource-file src="src/ios/DNImagePicker/zh-Hans.lproj/DNImagePicker.strings" />
+        <resource-file src="src/ios/DNImagePicker/en.lproj/DNImagePicker.strings" target="en.lproj/DNImagePicker.strings"/>
+
         <resource-file src="src/ios/DNImagePicker/ImagesPicker.xcassets/images/assets_placeholder_picture.imageset/assets_placeholder_picture@2x.png" />
         <resource-file src="src/ios/DNImagePicker/ImagesPicker.xcassets/images/camera_edit_cut_cancel.imageset/camera_edit_cut_cancel@2x.png" />
         <resource-file src="src/ios/DNImagePicker/ImagesPicker.xcassets/images/camera_edit_cut_cancel_highlighted.imageset/camera_edit_cut_cancel_highlighted@2x.png" />
